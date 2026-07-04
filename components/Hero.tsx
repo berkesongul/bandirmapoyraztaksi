@@ -14,7 +14,7 @@ export default function Hero() {
       {/* ── Background: banner image + dark overlay ── */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/banner.png"
+          src="/bandirmapoyraztaksi/banner.png"
           alt=""
           fill
           sizes="100vw"
@@ -143,7 +143,7 @@ export default function Hero() {
             {/* Image */}
             <div className="relative w-full max-w-[640px]">
               <Image
-                src="/taksi.png"
+                src="/bandirmapoyraztaksi/taksi.png"
                 alt="Bandırma Poyraz Taksi — Premium araç filosu"
                 width={800}
                 height={550}

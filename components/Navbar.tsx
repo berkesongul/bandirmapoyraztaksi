@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <button onClick={() => go("#hero")} className="flex items-center gap-4 group" aria-label="Ana Sayfa">
             <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-zinc-800 group-hover:border-[#ffcc00]/50 transition-all flex-shrink-0">
-              <Image src="/favicon.png" alt="Bandırma Poyraz Taksi" fill sizes="44px" className="object-cover" />
+              <Image src="/bandirmapoyraztaksi/favicon.png" alt="Bandırma Poyraz Taksi" fill sizes="44px" className="object-cover" />
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-[9px] font-bold text-[#ffcc00] tracking-[0.25em] uppercase mb-1">Bandırma</span>

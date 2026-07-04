@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-8">
               <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-zinc-800">
-                <Image src="/favicon.png" alt="Bandırma Poyraz Taksi" fill sizes="48px" className="object-cover" />
+                <Image src="/bandirmapoyraztaksi/favicon.png" alt="Bandırma Poyraz Taksi" fill sizes="48px" className="object-cover" />
               </div>
               <div>
                 <p className="text-[11px] font-bold text-[#ffcc00] tracking-[0.2em] uppercase mb-1">Bandırma</p>
