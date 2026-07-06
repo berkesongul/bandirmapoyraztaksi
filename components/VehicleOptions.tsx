@@ -13,14 +13,14 @@ import lodgyImg from "@/app/Taksi/lodgy Background Removed.png";
 
 const vehicles = [
   {
-    name: "Fiat Egea",
-    subtitle: "Modern & Konforlu Sedan",
-    image: egeaImg,
+    name: "Ford Courier",
+    subtitle: "Pratik & Bagaj Dostu Kombi",
+    image: courierImg,
     passengers: "1-4 Yolcu",
-    luggage: "2-3 Büyük Valiz",
-    desc: "Şehir içi ve şehirler arası seyahatlerinizde şık tasarımı, gelişmiş süspansiyon sistemi ve geniş iç hacmiyle üst düzey konfor sunar.",
-    features: ["Dijital Klima", "USB Şarj Noktası", "Geniş Diz Mesafesi", "Modern Güvenlik Sistemleri"],
-    accent: "Yeni Nesil",
+    luggage: "3-4 Valiz",
+    desc: "Geniş bagaj hacmi, yüksek tavan yapısı ve konforlu binek sürüş özellikleri ile hem yolcularımız hem de eşyaları için ideal, pratik ve ekonomik bir seyahat alternatifi.",
+    features: ["Klima", "Geniş Bagaj Hacmi", "Yüksek Tavan Konforu", "Yakıt Verimliliği"],
+    accent: "Pratik & Geniş Kombi",
   },
   {
     name: "Fiat Linea",
@@ -33,6 +33,16 @@ const vehicles = [
     accent: "Ekonomik & Geniş",
   },
   {
+    name: "Fiat Egea",
+    subtitle: "Modern & Konforlu Sedan",
+    image: egeaImg,
+    passengers: "1-4 Yolcu",
+    luggage: "2-3 Büyük Valiz",
+    desc: "Şehir içi ve şehirler arası seyahatlerinizde şık tasarımı, gelişmiş süspansiyon sistemi ve geniş iç hacmiyle üst düzey konfor sunar.",
+    features: ["Dijital Klima", "USB Şarj Noktası", "Geniş Diz Mesafesi", "Modern Güvenlik Sistemleri"],
+    accent: "Yeni Nesil",
+  },
+  {
     name: "Renault Symbol",
     subtitle: "Pratik & Bütçe Dostu Sedan",
     image: symbolImg,
@@ -41,16 +51,6 @@ const vehicles = [
     desc: "Özellikle şehir içi kısa ve orta mesafeli seyahatlerinizde kıvraklığı, yakıt verimliliği ve temiz kabiniyle pratik ve konforlu bir deneyim sağlar.",
     features: ["Klima", "Temiz & Hijyenik Kabin", "Pratik Bagaj Alanı", "Şehir İçi Kolaylık"],
     accent: "Bütçe Dostu",
-  },
-  {
-    name: "Ford Courier",
-    subtitle: "Pratik & Bagaj Dostu Kombi",
-    image: courierImg,
-    passengers: "1-4 Yolcu",
-    luggage: "3-4 Valiz",
-    desc: "Geniş bagaj hacmi, yüksek tavan yapısı ve konforlu binek sürüş özellikleri ile hem yolcularımız hem de eşyaları için ideal, pratik ve ekonomik bir seyahat alternatifi.",
-    features: ["Klima", "Geniş Bagaj Hacmi", "Yüksek Tavan Konforu", "Yakıt Verimliliği"],
-    accent: "Pratik & Geniş Kombi",
   },
   {
     name: "Dacia Lodgy",

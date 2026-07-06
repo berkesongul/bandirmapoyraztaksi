@@ -6,7 +6,8 @@ import { Clock, MapPin, ArrowRight, Phone } from "lucide-react";
 const routes = [
   { from: "Bandırma Otogarı", to: "Bandırma Limanı (İDO)", time: "~8 dk", price: "₺295 – ₺315", km: "3.5 km", type: "Şehir İçi" },
   { from: "Üniversite Yerleşkesi", to: "Şehir Merkezi", time: "~10 dk", price: "₺330 – ₺350", km: "4.2 km", type: "Şehir İçi" },
-  { from: "Bandırma Limanı", to: "Havaalanı (KCO)", time: "~20 dk", price: "₺590 – ₺615", km: "9 km", type: "Transfer" },
+  { from: "Şehir Merkezi", to: "Bandırma Otogarı", time: "~10 dk", price: "₺450", km: "6 km", type: "Şehir İçi" },
+  { from: "Şehir Merkezi", to: "Devlet Hastanesi", time: "~12 dk", price: "₺450", km: "7.5 km", type: "Şehir İçi" },
   { from: "Bandırma Merkez", to: "Erdek", time: "~35 dk", price: "₺1.300 – ₺1.340", km: "22 km", type: "Şehirlerarası" },
   { from: "Bandırma Otogarı", to: "Bursa", time: "~1.5 saat", price: "₺5.300 – ₺5.400", km: "95 km", type: "Şehirlerarası" },
   { from: "Bandırma Liman", to: "İstanbul (Anadolu)", time: "~3.5 saat", price: "₺12.700 – ₺12.850", km: "230 km", type: "Şehirlerarası" },
@@ -60,13 +61,13 @@ export default function RouteEstimator() {
                   <div className="w-2.5 h-2.5 rounded-full bg-zinc-600" />
                 </div>
                 <div className="flex flex-col gap-2.5 min-w-0">
-                  <p className="text-base sm:text-lg font-bold text-white flex items-center gap-2 truncate">
+                  <p className="text-base sm:text-lg font-bold text-white flex flex-wrap items-center gap-2">
                     <MapPin size={14} className="text-[#ffcc00] flex-shrink-0" />
-                    {r.from}
+                    <span>{r.from}</span>
                   </p>
-                  <p className="text-base sm:text-[17px] text-zinc-500 flex items-center gap-2 truncate">
-                    <MapPin size={14} className="text-zinc-600 flex-shrink-0" />
-                    {r.to}
+                  <p className="text-base sm:text-[17px] text-zinc-500 flex flex-wrap items-center gap-2">
+                    <MapPin size={14} className="text-zinc-650 flex-shrink-0" />
+                    <span>{r.to}</span>
                   </p>
                 </div>
               </div>

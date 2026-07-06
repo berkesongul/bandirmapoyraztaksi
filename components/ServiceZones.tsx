@@ -124,7 +124,7 @@ export default function ServiceZones() {
                 <div className="flex items-center gap-4 min-w-0">
                   <div className="flex flex-col min-w-0">
                     <span className="text-xs text-zinc-500 uppercase tracking-wider mb-2">Güzergah</span>
-                    <div className="flex items-center gap-3 text-base lg:text-lg font-bold text-white truncate">
+                    <div className="flex flex-wrap items-center gap-2 text-base lg:text-lg font-bold text-white">
                       <span>{r.from}</span>
                       <ArrowRight size={16} className="text-[#ffcc00] flex-shrink-0" />
                       <span>{r.to}</span>
