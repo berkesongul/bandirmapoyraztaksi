@@ -35,12 +35,13 @@ export default function ServiceZones() {
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
           className="section-header"
+          style={{ marginBottom: "1.5rem" }}
         >
           <div className="eyebrow mx-auto w-fit">
             <Navigation2 size={14} />
             Hizmet Bölgeleri
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white" style={{ marginBottom: "3rem" }}>
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white" style={{ marginBottom: "1.5rem" }}>
             Bandırma&apos;nın Her Noktasına{" "}
             <span className="gradient-text">Ulaşım</span>
           </h2>
@@ -56,7 +57,6 @@ export default function ServiceZones() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-24"
         >
           <div className="flex items-center gap-4" style={{ marginBottom: "2rem" }}>
             <MapPin size={18} className="text-[#ffcc00]" />
@@ -68,11 +68,20 @@ export default function ServiceZones() {
             {localZones.map((z, i) => (
               <motion.span
                 key={z}
-                initial={{ opacity: 0, scale: 0.88 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.04 }}
-                className="tag-chip px-5 py-3 sm:px-8 sm:py-4 text-base sm:text-lg"
+                transition={{ delay: i * 0.03, duration: 0.4 }}
+                className="tag-chip text-base sm:text-lg"
+                style={{
+                  paddingTop: "0.85rem",
+                  paddingBottom: "0.85rem",
+                  paddingLeft: "1.75rem",
+                  paddingRight: "1.75rem",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem"
+                }}
               >
                 <MapPin size={16} />
                 {z}
@@ -87,6 +96,7 @@ export default function ServiceZones() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.08 }}
+          style={{ marginTop: "1.75rem" }}
         >
           <div className="flex items-center gap-4" style={{ marginBottom: "2rem" }}>
             <Navigation2 size={18} className="text-[#ffcc00]" />
@@ -99,11 +109,17 @@ export default function ServiceZones() {
             {intercityRoutes.map((r, i) => (
               <motion.div
                 key={`${r.from}-${r.to}`}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.38, delay: i * 0.06 }}
-                className="card-hover bg-zinc-950/40 border border-zinc-800/40 p-8 sm:p-10 lg:p-12 rounded-3xl flex justify-between items-center group gap-6 min-h-[120px]"
+                transition={{ duration: 0.5, delay: i * 0.07 }}
+                className="card-hover bg-zinc-950/40 border border-zinc-800/40 rounded-3xl flex justify-between items-center group gap-6 min-h-[120px]"
+                style={{
+                  paddingTop: "2.5rem",
+                  paddingBottom: "2.5rem",
+                  paddingLeft: "3rem",
+                  paddingRight: "3rem"
+                }}
               >
                 <div className="flex items-center gap-4 min-w-0">
                   <div className="flex flex-col min-w-0">
@@ -123,9 +139,9 @@ export default function ServiceZones() {
             ))}
           </div>
 
-          <p className="text-center text-sm text-zinc-600 mt-12">
+          <p className="text-center text-sm text-zinc-600" style={{ marginTop: "1.5rem" }}>
             Listelenmemiş bir bölge için{" "}
-            <a href="tel:+905532222222" className="text-[#ffcc00] hover:underline font-semibold">
+            <a href="tel:+905372738182" className="text-[#ffcc00] hover:underline font-semibold">
               bizi arayın
             </a>
             .

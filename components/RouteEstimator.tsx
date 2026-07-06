@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { Clock, MapPin, ArrowRight, Phone } from "lucide-react";
 
 const routes = [
-  { from: "Bandırma Otogarı", to: "Bandırma Limanı (İDO)", time: "~8 dk", price: "₺80 – ₺120", km: "3.5 km", type: "Şehir İçi" },
-  { from: "Üniversite Yerleşkesi", to: "Şehir Merkezi", time: "~10 dk", price: "₺90 – ₺130", km: "4.2 km", type: "Şehir İçi" },
-  { from: "Bandırma Limanı", to: "Havaalanı (KCO)", time: "~20 dk", price: "₺200 – ₺280", km: "9 km", type: "Transfer" },
-  { from: "Bandırma Merkez", to: "Erdek", time: "~35 dk", price: "₺350 – ₺450", km: "22 km", type: "Şehirlerarası" },
-  { from: "Bandırma Otogarı", to: "Bursa", time: "~1.5 saat", price: "₺1.200 – ₺1.600", km: "95 km", type: "Şehirlerarası" },
-  { from: "Bandırma Liman", to: "İstanbul (Anadolu)", time: "~3.5 saat", price: "₺2.500 – ₺3.200", km: "230 km", type: "Şehirlerarası" },
+  { from: "Bandırma Otogarı", to: "Bandırma Limanı (İDO)", time: "~8 dk", price: "₺190 – ₺210", km: "3.5 km", type: "Şehir İçi" },
+  { from: "Üniversite Yerleşkesi", to: "Şehir Merkezi", time: "~10 dk", price: "₺225 – ₺245", km: "4.2 km", type: "Şehir İçi" },
+  { from: "Bandırma Limanı", to: "Havaalanı (KCO)", time: "~20 dk", price: "₺480 – ₺510", km: "9 km", type: "Transfer" },
+  { from: "Bandırma Merkez", to: "Erdek", time: "~35 dk", price: "₺1.180 – ₺1.240", km: "22 km", type: "Şehirlerarası" },
+  { from: "Bandırma Otogarı", to: "Bursa", time: "~1.5 saat", price: "₺5.150 – ₺5.300", km: "95 km", type: "Şehirlerarası" },
+  { from: "Bandırma Liman", to: "İstanbul (Anadolu)", time: "~3.5 saat", price: "₺12.500 – ₺12.800", km: "230 km", type: "Şehirlerarası" },
 ];
 
 const typeBadge: Record<string, string> = {
@@ -31,7 +31,7 @@ export default function RouteEstimator() {
           className="section-header"
         >
           <div className="eyebrow mx-auto w-fit">Tahmini Fiyatlar</div>
-          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white" style={{ marginBottom: "1.5rem" }}>
             Popüler <span className="gradient-text">Güzergahlar</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto leading-relaxed text-lg text-center">
@@ -41,31 +41,31 @@ export default function RouteEstimator() {
         </motion.div>
 
         {/* Route rows */}
-        <div className="flex flex-col gap-3" style={{ marginBottom: "4rem" }}>
+        <div className="flex flex-col gap-5" style={{ marginBottom: "4rem" }}>
           {routes.map((r, i) => (
             <motion.div
               key={`${r.from}-${r.to}`}
-              initial={{ opacity: 0, x: -16 }}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
+              transition={{ duration: 0.55, delay: i * 0.07 }}
               className="card-hover bg-zinc-950/40 border border-zinc-800/40 rounded-3xl flex flex-col sm:flex-row sm:items-center gap-6 justify-between"
-              style={{ padding: "2.5rem 3rem" }}
+              style={{ padding: "3rem 3.5rem" }}
             >
               {/* Route */}
               <div className="flex items-center gap-6 flex-1 min-w-0">
                 {/* Dot connector */}
                 <div className="flex flex-col items-center gap-1 flex-shrink-0">
                   <div className="w-2.5 h-2.5 rounded-full bg-[#ffcc00]" />
-                  <div className="w-[2px] h-7 bg-gradient-to-b from-[#ffcc00]/60 to-zinc-700" />
+                  <div className="w-[2px] h-9 bg-gradient-to-b from-[#ffcc00]/60 to-zinc-700" />
                   <div className="w-2.5 h-2.5 rounded-full bg-zinc-600" />
                 </div>
-                <div className="flex flex-col gap-2 min-w-0">
-                  <p className="text-base font-semibold text-white flex items-center gap-2 truncate">
+                <div className="flex flex-col gap-2.5 min-w-0">
+                  <p className="text-base sm:text-lg font-bold text-white flex items-center gap-2 truncate">
                     <MapPin size={14} className="text-[#ffcc00] flex-shrink-0" />
                     {r.from}
                   </p>
-                  <p className="text-base text-zinc-500 flex items-center gap-2 truncate">
+                  <p className="text-base sm:text-[17px] text-zinc-500 flex items-center gap-2 truncate">
                     <MapPin size={14} className="text-zinc-600 flex-shrink-0" />
                     {r.to}
                   </p>
@@ -87,7 +87,7 @@ export default function RouteEstimator() {
                 </span>
                 <div className="text-right min-w-[140px] lg:min-w-[160px]">
                   <p className="text-[11px] text-zinc-600 uppercase tracking-wider mb-1.5">Tahmini</p>
-                  <p className="text-lg lg:text-xl font-black text-[#ffcc00]">{r.price}</p>
+                  <p className="text-xl lg:text-2xl font-black text-[#ffcc00]">{r.price}</p>
                 </div>
               </div>
             </motion.div>
@@ -104,7 +104,7 @@ export default function RouteEstimator() {
         >
           <p className="text-zinc-500 text-base" style={{ marginBottom: "2rem" }}>Özel güzergah veya kurumsal fiyat teklifi için:</p>
           <motion.a
-            href="tel:+905532222222"
+            href="tel:+905372738182"
             whileTap={{ scale: 0.96 }}
             whileHover={{ scale: 1.03 }}
             className="inline-flex items-center gap-5 bg-[#ffcc00] text-zinc-950 font-bold rounded-full hover:bg-[#ffe066] transition-all accent-glow"
@@ -114,7 +114,7 @@ export default function RouteEstimator() {
             }}
           >
             <Phone size={28} strokeWidth={2.5} />
-            +90 553 222 22 22
+            +90 537 273 81 82
           </motion.a>
         </motion.div>
       </div>

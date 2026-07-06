@@ -9,7 +9,8 @@ const navLinks = [
   { label: "Ana Sayfa", href: "#hero" },
   { label: "Hizmetler", href: "#hizmetler" },
   { label: "Bölgeler", href: "#bolgeler" },
-  { label: "Araç Filomuz", href: "#filo" },
+  { label: "Araçlarımız", href: "#araclar" },
+  { label: "S.S.S.", href: "#faq" },
   { label: "İletişim", href: "#iletisim" },
 ];
 
@@ -38,12 +39,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <button onClick={() => go("#hero")} className="flex items-center gap-4 group" aria-label="Ana Sayfa">
-            <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-zinc-800 group-hover:border-[#ffcc00]/50 transition-all flex-shrink-0">
-              <Image src="/bandirmapoyraztaksi/favicon.png" alt="Bandırma Poyraz Taksi" fill sizes="44px" className="object-cover" />
+            <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-[#ffcc00]/50 transition-all flex-shrink-0" style={{ padding: "0.25rem" }}>
+              <Image src="/bandirmapoyraztaksi/bandirmataksilogo.png" alt="Bandırma Poyraz Taksi" fill sizes="56px" className="object-contain" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-[9px] font-bold text-[#ffcc00] tracking-[0.25em] uppercase mb-1">Bandırma</span>
-              <span className="text-base font-bold text-white tracking-wide">Poyraz Taksi</span>
+              <span className="text-[11px] font-bold text-[#ffcc00] tracking-[0.25em] uppercase mb-1">Bandırma</span>
+              <span className="text-lg sm:text-xl font-bold text-white tracking-wide">Poyraz Taksi</span>
             </div>
           </button>
 
@@ -64,7 +65,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
 
             <motion.a
-              href="tel:+905532222222"
+              href="tel:+905372738182"
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.04 }}
               className="hidden md:flex items-center gap-3 bg-[#ffcc00] text-zinc-950 font-bold rounded-full hover:bg-[#ffe066] transition-all accent-glow"

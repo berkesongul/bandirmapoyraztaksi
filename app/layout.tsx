@@ -5,7 +5,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Bandırma Poyraz Taksi | Bandırma'da 7/24 Lüks Taksi Hizmeti",
   description:
-    "Bandırma Poyraz Taksi ile konforlu, hızlı ve güvenli ulaşım. Bandırma Limanı, Otogar, Üniversite ve şehir içi tüm noktalar. 7/24 hizmet. +90 553 222 22 22",
+    "Bandırma Poyraz Taksi ile konforlu, hızlı ve güvenli ulaşım. Bandırma Limanı, Otogar, Üniversite ve şehir içi tüm noktalar. 7/24 hizmet. +90 537 273 81 82",
   keywords:
     "Bandırma Taksi, Bandırma Otogar Taksi, Bandırma Liman Taksi, Bandırma Üniversitesi Taksi, Bandırma Transfer, Bandırma Shuttle, Bandırma Havaalanı Transfer, Bandırma İzmir Taksi, Bandırma Bursa Taksi",
   authors: [{ name: "Bandırma Poyraz Taksi" }],
@@ -33,8 +33,8 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        <link rel="icon" href="/bandirmapoyraztaksi/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/bandirmapoyraztaksi/favicon.png" />
+        <link rel="icon" href="/bandirmapoyraztaksi/bandirmataksilogo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/bandirmapoyraztaksi/bandirmataksilogo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0e0e0e" />
         {/* JSON-LD Local Business */}
@@ -45,10 +45,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "TaxiService",
               name: "Bandırma Poyraz Taksi",
-              telephone: "+905532222222",
+              telephone: "+905372738182",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "İskele Mh.",
+                streetAddress: "İhsaniye Mah. Kurtuluş Cad. No.:2",
                 addressLocality: "Bandırma",
                 addressRegion: "Balıkesir",
                 postalCode: "10200",

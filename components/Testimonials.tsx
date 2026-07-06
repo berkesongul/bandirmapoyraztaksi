@@ -92,13 +92,22 @@ export default function Testimonials() {
             Yüzlerce memnun müşterimizin gerçek Google değerlendirmeleri.
           </p>
           {/* Score pill */}
-          <div className="inline-flex items-center gap-7 bg-zinc-870/60 border border-zinc-700/80 rounded-2xl px-8 py-4">
-            <div className="flex gap-1">
-              {[1, 2, 3, 4, 5].map((i) => <Star key={i} size={17} className="star-filled" />)}
+          <div
+            className="inline-flex items-center bg-zinc-870/60 border border-zinc-700/80 rounded-2xl"
+            style={{
+              paddingTop: "1.25rem",
+              paddingBottom: "1.25rem",
+              paddingLeft: "2.5rem",
+              paddingRight: "2.5rem",
+              gap: "2.25rem",
+              marginBottom: "1.5rem"
+            }}
+          >
+            <div className="flex gap-1.5">
+              {[1, 2, 3, 4, 5].map((i) => <Star key={i} size={20} className="star-filled" />)}
             </div>
-            <span className="text-2xl font-black text-white">5.0</span>
-            <span className="text-sm text-zinc-500">/ 5.0 Google Puanı</span>
-
+            <span className="text-3xl font-black text-white">5.0</span>
+            <span className="text-base text-zinc-500">/ 5.0 Google Puanı</span>
           </div>
         </motion.div>
       </div>

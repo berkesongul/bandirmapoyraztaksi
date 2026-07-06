@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy Next.js site to Pages
+name: Deploy Next JS web site for Bandirma Poyraz Taxix
 
 on:
   # Runs on pushes targeting the default branch
