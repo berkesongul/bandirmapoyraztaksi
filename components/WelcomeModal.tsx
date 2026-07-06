@@ -21,7 +21,7 @@ export default function WelcomeModal() {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          
+
           {/* Backdrop overlay */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -63,20 +63,20 @@ export default function WelcomeModal() {
 
             {/* Content */}
             <div className="flex flex-col gap-3" style={{ textAlign: "center", marginBottom: "1rem" }}>
-              <span 
+              <span
                 className="text-[10px] sm:text-xs font-black text-[#ffcc00] tracking-[0.2em] uppercase"
                 style={{ textAlign: "center", display: "block", width: "100%" }}
               >
                 Bandırma Poyraz Taksi
               </span>
-              <h3 
+              <h3
                 className="text-2xl sm:text-3xl font-black text-white leading-tight"
                 style={{ textAlign: "center", display: "block", width: "100%" }}
               >
-                10 Dakikada <br />
+                5 Dakikada <br />
                 <span className="gradient-text">Yanınızda!</span>
               </h3>
-              <p 
+              <p
                 className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-2 max-w-sm"
                 style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto", display: "block", width: "100%" }}
               >
@@ -109,14 +109,14 @@ export default function WelcomeModal() {
             </div>
 
             {/* Trust badge */}
-            <div 
+            <div
               className="flex items-center gap-2 mt-6 text-[11px] text-zinc-650"
               style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}
             >
               <ShieldCheck size={14} className="text-[#ffcc00]/50" />
               <span>Güvenli & Hijyenik Yolculuk Garantisi</span>
             </div>
-            
+
           </motion.div>
         </div>
       )}

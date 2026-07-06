@@ -9,8 +9,9 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
-import TranslateWidget from "@/components/TranslateWidget";
 import WelcomeModal from "@/components/WelcomeModal";
+import FloatingCallWidget from "@/components/FloatingCallWidget";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
   return (
@@ -26,8 +27,9 @@ export default function Home() {
       <ContactSection />
       <Footer />
       <StickyMobileCTA />
-      <TranslateWidget />
       <WelcomeModal />
+      <FloatingCallWidget />
+      <WhatsAppWidget />
     </main>
   );
 }

@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { Clock, MapPin, ArrowRight, Phone } from "lucide-react";
 
 const routes = [
-  { from: "Bandırma Otogarı", to: "Bandırma Limanı (İDO)", time: "~8 dk", price: "₺190 – ₺210", km: "3.5 km", type: "Şehir İçi" },
-  { from: "Üniversite Yerleşkesi", to: "Şehir Merkezi", time: "~10 dk", price: "₺225 – ₺245", km: "4.2 km", type: "Şehir İçi" },
-  { from: "Bandırma Limanı", to: "Havaalanı (KCO)", time: "~20 dk", price: "₺480 – ₺510", km: "9 km", type: "Transfer" },
-  { from: "Bandırma Merkez", to: "Erdek", time: "~35 dk", price: "₺1.180 – ₺1.240", km: "22 km", type: "Şehirlerarası" },
-  { from: "Bandırma Otogarı", to: "Bursa", time: "~1.5 saat", price: "₺5.150 – ₺5.300", km: "95 km", type: "Şehirlerarası" },
-  { from: "Bandırma Liman", to: "İstanbul (Anadolu)", time: "~3.5 saat", price: "₺12.500 – ₺12.800", km: "230 km", type: "Şehirlerarası" },
+  { from: "Bandırma Otogarı", to: "Bandırma Limanı (İDO)", time: "~8 dk", price: "₺295 – ₺315", km: "3.5 km", type: "Şehir İçi" },
+  { from: "Üniversite Yerleşkesi", to: "Şehir Merkezi", time: "~10 dk", price: "₺330 – ₺350", km: "4.2 km", type: "Şehir İçi" },
+  { from: "Bandırma Limanı", to: "Havaalanı (KCO)", time: "~20 dk", price: "₺590 – ₺615", km: "9 km", type: "Transfer" },
+  { from: "Bandırma Merkez", to: "Erdek", time: "~35 dk", price: "₺1.300 – ₺1.340", km: "22 km", type: "Şehirlerarası" },
+  { from: "Bandırma Otogarı", to: "Bursa", time: "~1.5 saat", price: "₺5.300 – ₺5.400", km: "95 km", type: "Şehirlerarası" },
+  { from: "Bandırma Liman", to: "İstanbul (Anadolu)", time: "~3.5 saat", price: "₺12.700 – ₺12.850", km: "230 km", type: "Şehirlerarası" },
 ];
 
 const typeBadge: Record<string, string> = {
@@ -35,8 +35,8 @@ export default function RouteEstimator() {
             Popüler <span className="gradient-text">Güzergahlar</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto leading-relaxed text-lg text-center">
-            Fiyatlar tahmini olup trafik ve yolculuk koşullarına göre değişebilir.
-            Kesin fiyat için bizi arayın.
+            Fiyatlar kilometre başı 55 TL + 108 TL açılış ücreti üzerinden hesaplanmıştır.
+            İndi-bindi (kısa mesafe) minimum ücreti 220 TL&apos;dir.
           </p>
         </motion.div>
 
@@ -49,8 +49,7 @@ export default function RouteEstimator() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: i * 0.07 }}
-              className="card-hover bg-zinc-950/40 border border-zinc-800/40 rounded-3xl flex flex-col sm:flex-row sm:items-center gap-6 justify-between"
-              style={{ padding: "3rem 3.5rem" }}
+              className="card-hover bg-zinc-950/40 border border-zinc-800/40 rounded-3xl flex flex-col md:flex-row md:items-center gap-6 justify-between p-6 sm:p-10 lg:p-12"
             >
               {/* Route */}
               <div className="flex items-center gap-6 flex-1 min-w-0">
@@ -73,19 +72,21 @@ export default function RouteEstimator() {
               </div>
 
               {/* Stats */}
-              <div className="flex items-center gap-8 sm:gap-12 flex-shrink-0 pl-8 sm:pl-0">
-                <div className="flex items-center gap-2 text-zinc-500">
-                  <Clock size={16} />
-                  <span className="text-sm font-medium">{r.time}</span>
+              <div className="flex flex-wrap items-center justify-between md:justify-end gap-6 sm:gap-8 md:gap-12 flex-shrink-0 w-full md:w-auto mt-4 md:mt-0">
+                <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
+                  <div className="flex items-center gap-2 text-zinc-500">
+                    <Clock size={16} />
+                    <span className="text-sm font-medium">{r.time}</span>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-2 text-zinc-600">
+                    <ArrowRight size={16} />
+                    <span className="text-sm">{r.km}</span>
+                  </div>
+                  <span className={`text-[11px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wide ${typeBadge[r.type]}`}>
+                    {r.type}
+                  </span>
                 </div>
-                <div className="hidden sm:flex items-center gap-2 text-zinc-600">
-                  <ArrowRight size={16} />
-                  <span className="text-sm">{r.km}</span>
-                </div>
-                <span className={`text-[11px] font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wide ${typeBadge[r.type]}`}>
-                  {r.type}
-                </span>
-                <div className="text-right min-w-[140px] lg:min-w-[160px]">
+                <div className="text-right min-w-[120px] sm:min-w-[140px] lg:min-w-[160px]">
                   <p className="text-[11px] text-zinc-600 uppercase tracking-wider mb-1.5">Tahmini</p>
                   <p className="text-xl lg:text-2xl font-black text-[#ffcc00]">{r.price}</p>
                 </div>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import egeaImg from "@/app/Taksi/egea Background Removed.png";
+import courierImg from "@/app/Taksi/courier Background Removed.png";
 
 export default function Hero() {
   const go = (id: string) =>
@@ -148,7 +148,7 @@ export default function Hero() {
             {/* Image */}
             <div className="relative w-full max-w-[640px]">
               <Image
-                src={egeaImg}
+                src={courierImg}
                 alt="Bandırma Poyraz Taksi — Premium araç filosu"
                 width={800}
                 height={550}

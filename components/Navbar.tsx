@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
 
+import TranslateWidget from "./TranslateWidget";
+
 const navLinks = [
   { label: "Ana Sayfa", href: "#hero" },
   { label: "Hizmetler", href: "#hizmetler" },
@@ -30,15 +32,14 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-4 md:top-6 left-0 right-0 z-50 transition-all duration-500">
-      <div className="container">
-        <div className={`flex items-center justify-between px-6 lg:px-10 h-[76px] rounded-2xl border transition-all duration-500 ${scrolled
-          ? "bg-zinc-950/85 backdrop-blur-2xl border-zinc-800/80 shadow-[0_16px_40px_rgba(0,0,0,0.6)]"
-          : "bg-zinc-950/30 backdrop-blur-xl border-zinc-800/20"
-          }`}>
+    <div className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-full max-w-[85rem] px-4 z-50 transition-all duration-500">
+      <div className={`flex items-center justify-between px-6 lg:px-10 h-[76px] rounded-2xl border transition-all duration-500 ${scrolled
+        ? "bg-zinc-950/85 backdrop-blur-2xl border-zinc-800/80 shadow-[0_16px_40px_rgba(0,0,0,0.6)]"
+        : "bg-zinc-950/30 backdrop-blur-xl border-zinc-800/20"
+        }`}>
 
           {/* Logo */}
-          <button onClick={() => go("#hero")} className="flex items-center gap-4 group" aria-label="Ana Sayfa">
+          <button onClick={() => go("#hero")} className="flex items-center gap-4 group" style={{ marginLeft: "1rem" }} aria-label="Ana Sayfa">
             <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-[#ffcc00]/50 transition-all flex-shrink-0" style={{ padding: "0.25rem" }}>
               <Image src="/bandirmapoyraztaksi/bandirmataksilogo.png" alt="Bandırma Poyraz Taksi" fill sizes="56px" className="object-contain" />
             </div>
@@ -49,7 +50,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop links — spacious */}
-          <nav className="hidden lg:flex items-center gap-8 lg:gap-10 absolute left-1/2 -translate-x-1/2">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 mx-auto">
             {navLinks.map((l) => (
               <button
                 key={l.href}
@@ -62,7 +63,9 @@ export default function Navbar() {
           </nav>
 
           {/* Right actions */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
+
+            <TranslateWidget isNavbar={true} />
 
             <motion.a
               href="tel:+905372738182"
@@ -74,7 +77,6 @@ export default function Navbar() {
                 fontSize: "14px",
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
-                marginRight: "4rem"
               }}
             >
               <Phone size={18} strokeWidth={2.5} />
@@ -83,14 +85,13 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-3 rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:text-white hover:border-zinc-700 transition-all"
+              className="lg:hidden p-3 rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:text-white hover:border-zinc-700 transition-all flex-shrink-0"
               aria-label="Menü"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
-      </div>
 
       {/* Mobile menu */}
       <AnimatePresence>

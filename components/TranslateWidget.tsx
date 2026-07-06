@@ -9,7 +9,11 @@ const languages = [
   { code: "de", label: "Deutsch", flag: "🇩🇪" },
 ];
 
-export default function TranslateWidget() {
+interface TranslateWidgetProps {
+  isNavbar?: boolean;
+}
+
+export default function TranslateWidget({ isNavbar = false }: TranslateWidgetProps) {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(languages[0]);
 
@@ -70,28 +74,36 @@ export default function TranslateWidget() {
       <div
         translate="no"
         className="notranslate"
-        style={{
-          position: "fixed",
-          bottom: "1.75rem",
-          left: "1.75rem",
-          zIndex: 9999,
-        }}
+        style={
+          isNavbar
+            ? {
+                position: "relative",
+                zIndex: 50,
+              }
+            : {
+                position: "fixed",
+                top: "1.75rem",
+                left: "1.75rem",
+                zIndex: 9999,
+              }
+        }
       >
         <div style={{ position: "relative" }}>
-          {/* Dropdown list — appears above the button */}
+          {/* Dropdown list — appears below the button */}
           {open && (
             <div
               style={{
                 position: "absolute",
-                bottom: "calc(100% + 12px)",
-                left: 0,
+                top: "calc(100% + 8px)",
+                right: isNavbar ? 0 : "auto",
+                left: isNavbar ? "auto" : 0,
                 background: "rgba(18,18,20,0.95)",
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "1rem",
                 backdropFilter: "blur(20px)",
                 boxShadow: "0 16px 40px rgba(0,0,0,0.6)",
                 overflow: "hidden",
-                minWidth: "180px",
+                minWidth: "160px",
               }}
             >
               {languages.map((lang) => (
@@ -103,7 +115,7 @@ export default function TranslateWidget() {
                     alignItems: "center",
                     gap: "12px",
                     width: "100%",
-                    padding: "12px 20px",
+                    padding: "10px 18px",
                     background: current.code === lang.code ? "rgba(255,204,0,0.08)" : "transparent",
                     border: "none",
                     cursor: "pointer",
@@ -126,7 +138,7 @@ export default function TranslateWidget() {
                     }
                   }}
                 >
-                  <span style={{ fontSize: "18px" }}>{lang.flag}</span>
+                  <span style={{ fontSize: "16px" }}>{lang.flag}</span>
                   {lang.label}
                   {current.code === lang.code && (
                     <span style={{ marginLeft: "auto", color: "#ffcc00", fontSize: "12px" }}>✓</span>
@@ -142,16 +154,16 @@ export default function TranslateWidget() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "10px",
+              gap: "8px",
               background: "rgba(18,18,20,0.90)",
               border: "1px solid rgba(255,255,255,0.10)",
               borderRadius: "9999px",
               backdropFilter: "blur(20px)",
               boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
-              padding: "10px 18px",
+              padding: isNavbar ? "8px 12px" : "10px 18px",
               cursor: "pointer",
               color: "#e4e4e7",
-              fontSize: "13px",
+              fontSize: isNavbar ? "12px" : "13px",
               fontWeight: 600,
               transition: "border-color 0.2s, box-shadow 0.2s",
               outline: "none",
@@ -166,11 +178,11 @@ export default function TranslateWidget() {
             }}
             aria-label="Dil seçimi"
           >
-            <Globe size={15} style={{ color: "#ffcc00" }} />
+            <Globe size={14} style={{ color: "#ffcc00" }} />
             <span>{current.flag}</span>
-            <span>{current.label}</span>
+            <span className={isNavbar ? "hidden sm:inline" : ""}>{current.label}</span>
             <ChevronDown
-              size={13}
+              size={12}
               style={{
                 color: "#71717a",
                 transform: open ? "rotate(180deg)" : "rotate(0deg)",

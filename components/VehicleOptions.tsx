@@ -8,8 +8,8 @@ import { Users, Briefcase, CheckCircle2, Wind, Sparkles, Shield } from "lucide-r
 import egeaImg from "@/app/Taksi/egea Background Removed.png";
 import lineaImg from "@/app/Taksi/linea Background Removed.png";
 import symbolImg from "@/app/Taksi/symbol Background Removed.png";
+import courierImg from "@/app/Taksi/courier Background Removed.png";
 import lodgyImg from "@/app/Taksi/lodgy Background Removed.png";
-import tourneoImg from "@/app/Taksi/tourneo Background Removed.png";
 
 const vehicles = [
   {
@@ -43,6 +43,16 @@ const vehicles = [
     accent: "Bütçe Dostu",
   },
   {
+    name: "Ford Courier",
+    subtitle: "Pratik & Bagaj Dostu Kombi",
+    image: courierImg,
+    passengers: "1-4 Yolcu",
+    luggage: "3-4 Valiz",
+    desc: "Geniş bagaj hacmi, yüksek tavan yapısı ve konforlu binek sürüş özellikleri ile hem yolcularımız hem de eşyaları için ideal, pratik ve ekonomik bir seyahat alternatifi.",
+    features: ["Klima", "Geniş Bagaj Hacmi", "Yüksek Tavan Konforu", "Yakıt Verimliliği"],
+    accent: "Pratik & Geniş Kombi",
+  },
+  {
     name: "Dacia Lodgy",
     subtitle: "Geniş Aile & Bagaj Dostu MPV",
     image: lodgyImg,
@@ -51,16 +61,6 @@ const vehicles = [
     desc: "Geniş aileler ve kalabalık seyahat grupları için ideal olan, yüksek konforu ve 7 kişilik geniş yapısıyla bagaj dostu MPV aracımız.",
     features: ["Klima", "7 Koltuk Seçeneği", "Yüksek Tavan & Hacim", "Geniş Diz Mesafesi"],
     accent: "Geniş Aile & MPV",
-  },
-  {
-    name: "Ford Tourneo",
-    subtitle: "Geniş Aile & VIP Grup Transferi",
-    image: tourneoImg,
-    passengers: "1-8 Yolcu",
-    luggage: "5+ Büyük Valiz",
-    desc: "Kalabalık aileler, arkadaş grupları veya yüksek bagaj kapasitesine ihtiyaç duyan yolcularımız için özel olarak tasarlanmış geniş ve lüks minivan seçeneğimiz.",
-    features: ["Çift Klima", "Geniş Bagaj & Hacim", "VIP Koltuk Düzeni", "Yolcu USB Bağlantıları"],
-    accent: "Grup & VIP",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function VehicleOptions() {
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto leading-relaxed text-lg text-center">
             Sizler için özenle seçilmiş, tüm bakımları düzenli yapılan ve hijyen kurallarına 
-            uygun 4 farklı araç seçeneğimiz ile her seyahat ihtiyacınıza cevap veriyoruz.
+            uygun 5 farklı araç seçeneğimiz ile her seyahat ihtiyacınıza cevap veriyoruz.
           </p>
         </motion.div>
 
