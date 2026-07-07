@@ -44,7 +44,7 @@ export default function TrustBadges() {
       {/* ── Background: backgrounds/1.png + black overlays ── */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bandirmapoyraztaksi/backgrounds/1.png"
+          src="/backgrounds/1.png"
           alt=""
           fill
           sizes="100vw"

@@ -33,8 +33,8 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        <link rel="icon" href="/bandirmapoyraztaksi/bandirmataksilogo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/bandirmapoyraztaksi/bandirmataksilogo.png" />
+        <link rel="icon" href="/bandirmataksilogo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/bandirmataksilogo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0e0e0e" />
         {/* JSON-LD Local Business */}

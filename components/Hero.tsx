@@ -15,7 +15,7 @@ export default function Hero() {
       {/* ── Background: banner image + dark overlay ── */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bandirmapoyraztaksi/backgrounds/banner.png"
+          src="/backgrounds/banner.png"
           alt=""
           fill
           sizes="100vw"

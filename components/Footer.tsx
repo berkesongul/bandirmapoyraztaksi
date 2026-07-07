@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4" style={{ marginBottom: "2rem" }}>
               <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-zinc-800" style={{ padding: "0.22rem" }}>
-                <Image src="/bandirmapoyraztaksi/bandirmataksilogo.png" alt="Bandırma Poyraz Taksi" fill sizes="48px" className="object-contain" />
+                <Image src="/bandirmataksilogo.png" alt="Bandırma Poyraz Taksi" fill sizes="48px" className="object-contain" />
               </div>
               <div>
                 <p className="text-[11px] font-bold text-[#ffcc00] tracking-[0.2em] uppercase mb-1">Bandırma</p>

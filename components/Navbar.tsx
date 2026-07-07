@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Logo */}
           <button onClick={() => go("#hero")} className="flex items-center gap-4 group" style={{ marginLeft: "1rem" }} aria-label="Ana Sayfa">
             <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-[#ffcc00]/50 transition-all flex-shrink-0" style={{ padding: "0.25rem" }}>
-              <Image src="/bandirmapoyraztaksi/bandirmataksilogo.png" alt="Bandırma Poyraz Taksi" fill sizes="56px" className="object-contain" />
+              <Image src="/bandirmataksilogo.png" alt="Bandırma Poyraz Taksi" fill sizes="56px" className="object-contain" />
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-[11px] font-bold text-[#ffcc00] tracking-[0.25em] uppercase mb-1">Bandırma</span>
