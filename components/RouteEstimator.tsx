@@ -9,8 +9,13 @@ const routes = [
   { from: "Şehir Merkezi", to: "Bandırma Otogarı", time: "~10 dk", price: "₺450", km: "6 km", type: "Şehir İçi" },
   { from: "Şehir Merkezi", to: "Devlet Hastanesi", time: "~12 dk", price: "₺450", km: "7.5 km", type: "Şehir İçi" },
   { from: "Bandırma Merkez", to: "Erdek", time: "~35 dk", price: "₺1.300 – ₺1.340", km: "22 km", type: "Şehirlerarası" },
+  { from: "Bandırma Merkez", to: "Karacabey", time: "~35 dk", price: "₺2.100 – ₺2.300", km: "38 km", type: "Şehirlerarası" },
+  { from: "Bandırma Merkez", to: "Gönen", time: "~40 dk", price: "₺2.250 – ₺2.450", km: "40 km", type: "Şehirlerarası" },
+  { from: "Bandırma Merkez", to: "Manyas", time: "~45 dk", price: "₺2.500 – ₺2.750", km: "45 km", type: "Şehirlerarası" },
+  { from: "Bandırma Merkez", to: "Susurluk", time: "~45 dk", price: "₺2.900 – ₺3.100", km: "52 km", type: "Şehirlerarası" },
   { from: "Bandırma Otogarı", to: "Bursa", time: "~1.5 saat", price: "₺5.300 – ₺5.400", km: "95 km", type: "Şehirlerarası" },
   { from: "Bandırma Liman", to: "İstanbul (Anadolu)", time: "~3.5 saat", price: "₺12.700 – ₺12.850", km: "230 km", type: "Şehirlerarası" },
+  { from: "Bandırma Merkez", to: "Sabiha Gökçen Havalimanı", time: "~2.5 saat", price: "₺11.000 – ₺11.800", km: "220 km", type: "Transfer" },
 ];
 
 const typeBadge: Record<string, string> = {
